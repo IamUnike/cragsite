@@ -1,0 +1,579 @@
+/* General */
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;	
+}
+
+body{
+	background-color:#ddd;
+	font-family:Arial,sans-serif;
+	height:100vh;
+	color: midnightblue;
+}
+
+p, a{
+	font-size:14px;
+	text-decoration:none;
+}
+
+.section{
+	width:100%;
+	min-height:400px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction: column;
+	padding:90px 0px 50px;
+	gap:2em;
+}
+
+
+/* Header Section */
+.header{
+	background-color:transparent;
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+	width:100%;
+	padding:5px;
+	min-height:100px;
+}
+
+.logo{
+	width:50%;
+	height:auto;
+}
+
+
+.nav{
+	list-style:none;
+	display: flex;	
+	justify-content:space-between;
+	align-items:center;	
+	gap:5px;
+}
+
+.fa-bars{
+	display:none;
+}
+
+.nav li{
+	padding:8px 4px;
+}
+
+.nav a{
+	color: midnightblue;
+	padding:8px 4px;
+}
+
+.nav a:hover{
+	border:1px solid midnightblue;
+	border-radius:3px;
+}
+
+.mobmenu {
+	display:none;
+}
+
+
+/* Main Section */
+.main-section{	
+	gap:30px;
+	min-height:450px;
+}
+
+
+.main-text {
+	text-align:center;
+	width:50%;
+}
+
+.main-text h1{
+	font-size:64px;
+	line-height:1.5em;
+}
+
+.dynamic-text{
+	color:green;
+	font-size:72px;
+}
+
+.main-p{
+	width:90%;
+	text-align:center;
+	font-size:16px;
+}
+
+button{
+	border:none;
+	padding:1em 1.5em;
+	border-radius:1em;
+	background-color:midnightblue;
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+	transition:.5s ;
+	margin:0 .5em 0;
+}
+
+button:hover{
+	background-color:transparent;
+	border:1px solid midnightblue;
+	color: midnightblue;
+}
+
+
+/* Product Section */
+.product-container, .ad-container{
+	width:90%;
+	display:grid;
+	grid-gap:20px;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.product{
+	min-height:300px;
+	border-radius:30px;
+	position:relative;
+}
+
+.product1{
+	background:url("redmi.jpg");
+}
+
+.product2{
+	background:url("pavilion.jpg");	
+}
+
+.product3{
+	background:url("xiaomi.jpg");
+}
+
+.product4{
+	background:url("spectre.jpg");
+	
+}
+
+.product div, .cragpay-store div{
+	display: flex;
+	border-radius:30px;
+	justify-content:center;
+	color:white;
+	align-items: center;
+	background:rgba(0,0,0,.7);
+	width:100%;
+	height:100%;
+}
+
+
+/* Purchase Section */
+.purchase-container {
+	width:70%;
+}
+
+.purchase-container p, .payment-container p{
+	margin:2em auto 4em;
+	font-size:16px;
+	line-height:2em;
+}
+
+
+.purchase-cards{
+	margin:1em auto 0;
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-gap:30px;
+}
+
+.card{
+	display:flex;
+	justify-content:center;	
+	align-items:center;
+	flex-direction:column;
+	min-height:200px;
+	padding:1em;
+	border-radius:20px;
+	gap:15px;
+	background-color:white;
+}
+
+
+.card-img {
+	width:60%;
+	align-self:flex-start;
+}
+
+.card-img img{
+	width:100%;
+	height:auto;
+}
+
+.card-desc {
+	width:90%;
+}
+
+.card-desc p{
+	margin:.7em auto;
+}
+
+
+/* Store Section */
+.store-container {
+	width:70%;
+}
+
+.store-container h2{
+	margin:0 auto 1.5em;
+}
+
+.cragpay-store {
+	width:50%;
+	border-radius:30px;	
+	height:300px;
+	background:url("pavilion.jpg");
+}
+
+.cragpay-store div{
+	position:relative;
+}
+
+.cragpay-store img{
+	width:50px;
+	height:50px;
+	position:absolute;
+	bottom:10px;
+	left:10px;
+}
+
+/* Payment Section */
+.payment-container {
+	width:80%;
+}
+
+.payment-instruction {
+	display:grid;
+	grid-gap:20px;
+	grid-template-columns:1fr 1fr;
+	position: relative;
+} 
+
+.dynamic-img-cont{
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.dynamic-img-card{
+	background:linear-gradient(#ddd, white);
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	width:90%;
+	height:60%;
+	border-radius:30px;
+}
+
+
+.dynamic-img-card img{
+	width:100%;
+	height:auto;
+	
+}
+
+.payment-desc {
+	padding:1em 2em;
+	min-height:250px;	
+}
+
+.payment-desc p{
+	margin:0 auto 1em;
+	font-weight:lighter;
+	font-size:14px;
+	line-height:2em;
+	padding:10px;
+	border-radius:10px;
+}
+
+.payment-desc p:hover{
+	border-right:2px inset green;
+	border-left:2px outset green;
+	background:white;
+	font-weight:normal;
+}
+
+
+/* Ad-Section Container */
+.ad-section {
+	background-color:crimson;
+	color:white;
+	padding:90px 0 0;
+}
+
+.ad-container {
+	width:70%;
+	grid-template-columns:1fr 1fr;
+}
+
+.ad-desc, .ad-img{	
+	min-height:150px;
+}
+
+.ad-desc {
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	padding:1em;
+}
+
+.ad-img img{
+	width:100%;
+	height:auto;
+}
+
+/* Footer Section */
+.footer-section {
+	background-color:green;
+	color:white;
+	min-height:100px;
+}
+
+.footer-container {
+	width:90%;
+	display:grid;
+	font-size:12px;
+	grid-template-columns:1fr 1fr 1fr;
+}
+
+.footer-logo, .footer-biz , .footer-contacts {	
+	min-height:100px auto;
+	line-height:2.5em;
+}
+
+.footer-contacts h4{
+	margin-bottom:.5em;
+}
+
+
+
+/* This makes it responsive on mobile phones */
+@media only screen and (max-width:700px){
+	
+/* Header Section */	
+	.nav{
+		display:none;	
+	}
+	
+	.section{
+		padding:4em 0 2em;
+	}
+	
+	.mobmenu{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction: column;
+		text-align:center;
+		background-color: midnightblue;
+		height: 100vh; 
+		width:0 ; /* 0 width - change this with JavaScript */
+		position: fixed; /* Stay in place */
+		z-index:1000; /* Stay on top */
+		top:0 ; /* Stay at the top */
+		left:0;
+		overflow-x: hidden; /* Disable horizontal scroll */
+		padding-top:; /* Place content 60px from the top */
+		transition: 0.5s; 
+		opacity:1; 	
+	}
+	
+	.open{
+		width:80%;
+	}
+	
+	.fa-close, .fa-bars {
+		color:white;
+		position:absolute;
+		top:1em;
+		right:1em;
+		font-size:1.5em;
+		border-radius:.3em;
+		border-bottom:1px inset white;
+		border-top:1px inset white;
+		padding:.3em;
+		color:crimson;
+		display:block;
+	}
+	
+	.mobmenu i:hover{
+		background-color:white;
+	}
+	
+	.fa-bars{
+		color: midnightblue;
+	}
+	
+	.mobmenu li{
+		width:100%;
+		list-style:none;
+	}
+	
+	.mobmenu a{
+		width:100%;
+		padding:.8em;
+		display:block;
+		font-size:1.3em;
+		color:white;
+		transition:.3s;
+	}
+	
+	.mobmenu a:hover{
+		background-color:white;
+		color: midnightblue;
+	}
+	
+	.socials{
+		position:absolute;
+		top:80vh;
+		left:2em;
+		color:white;
+		border:1px solid green;
+		width:75%;
+		padding:.5em;
+		text-align:center;
+	}
+	
+	.socials i{
+		margin-right:.5em;
+		font-size:1.3em;
+		padding:.3em;
+	}
+	
+	.socials i:hover{
+		border-bottom:2px solid crimson;
+		border-radius:100%;
+		background-color:transparent;	
+	}
+		
+
+/* Main Section */
+	.main-text {
+		width:90%;
+	}
+	
+	.main-text h1{
+		font-size:48px;
+		line-height:1.4em;
+	}
+	
+	.dynamic-text{
+		font-size:48px;
+	}
+		
+	button {
+		padding:1.5em 3em;
+	}
+		
+
+/* Product Section */
+	
+	.product-container, .ad-container{
+		width:80%;
+		grid-gap:2em;
+		grid-template-columns:1fr;
+	}
+	
+	
+	
+/* Purchase Section */
+
+	.purchase-container {
+		width:80%;
+	}
+
+	.purchase-container p, .payment-container p{
+		margin:1em auto;
+		line-height:1.5em;
+	}
+
+	.purchase-cards{
+		grid-template-columns:1fr;
+		grid-gap:2em;
+	}
+
+	.card-img{
+		width:60%;
+	}
+
+	.card-img img{
+		width:60%;
+	}
+
+
+/* Store Section */
+	.store-container {
+		width:80%;
+	}
+
+	.cragpay-store {
+		width:100%;	
+		height:270px;
+	}
+	
+
+/* Payment Section */	
+	.payment-container {
+		width:90%;
+	}
+	
+	.payment-instruction {
+		grid-template-columns:1fr;
+	} 
+	
+	.dynamic-img-card{
+		background:linear-gradient(#ddd, #fff);
+		width:90%;
+		height:70%;
+	}
+	
+	
+	.payment-desc p{
+		font-weight:normal;	
+		font-size:16px;
+	}
+	
+	
+/* Ad-Section Container */
+	.ad-section {
+		padding:4em 0 0;
+	}
+
+	.ad-container {
+		width:80%;
+		grid-template-columns:1fr;
+	}
+	
+	.ad-desc, .ad-img{
+		min-height:100px;
+	}
+	
+	
+/* Footer Section */	
+	.footer-container {
+		width:90%;
+		font-size:14px;
+		grid-gap:2em;
+		grid-template-columns:1fr;
+	}
+
+}	
+	
+	
+	
+	
+.bg-arrange{
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover; 	
+}
